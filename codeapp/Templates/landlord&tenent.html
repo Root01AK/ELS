@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>ELS-landlord and tenent</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/owl.carousel.min.css' %}" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+         <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+         <link href="{% static 'Bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+         <!-- Favicon
+           ============================================ -->
+           <link rel="icon" type="image/png" href="{% static 'img/ELSLOGO.png' %}">
+
+        <!-- Template Stylesheet -->
+         <!--link href="css/style.css" rel="stylesheet"-->
+
+         <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="preloader-active">
+            <div class="preloader d-flex align-items-center justify-content-center">
+                <div class="preloader-inner position-relative">
+                    <div class="preloader-circle"></div>
+                    <div class="preloader-img pere-text">
+                        <img src="{% static 'img/ELSLOGO.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+    <div class="overlay">    
+        <div class="container-fluid nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-4">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="{% static 'img/ELS white.png' %}" width="140px" height="10%" alt="logo">
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                            <a href="{% url 'about' %}" class="nav-item nav-link">About Us</a>
+                            <div class="nav-item dropdown">
+                                <a href="{% url 'service' %}" class="nav-link dropdown-toggle">Services</a>
+                                <div class="dropdown-menu bg-light">
+                                    <a href="{% url 'familylaw' %}" class="dropdown-item">Family Law</a>
+                                    <a href="{% url 'wills and probate' %}" class="dropdown-item">wills and Probate</a>
+                                    <a href="{% url 'employmentlaw' %}" class="dropdown-item">Employment Law</a>
+                                    <a href="{% url 'litigation' %}" class="dropdown-item">Litigation</a>
+                                    <a href="{% url 'rentrepayment' %}" class="dropdown-item">Rent Repayment Order</a>
+                                    <a href="{% url 'landlord&tenent' %}" class="dropdown-item active">Landlord and Tenant</a>
+                                    <a href="{% url 'insolvencymatters' %}" class="dropdown-item">Insolvency Matters</a>
+                                    <a href="{% url 'debtrecovery' %}" class="dropdown-item">Debt Recovery</a>
+                                    <a href="{% url 'clinicalnegligence' %}" class="dropdown-item">Clinical Negligence</a>
+                                    <a href="{% url 'contract' %}" class="dropdown-item">Contract Law</a>
+                                    <a href="{% url 'bankingandfinance' %}" class="dropdown-item">Banking And Finance</a>
+                                    <a href="{% url 'tradefinance' %}" class="dropdown-item">Trade Finance</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="{% url 'team' %}" class="nav-link dropdown-toggle">Our Team</a>
+                                <div class="dropdown-menu bg-light">
+                                    <a href="{% url 'hrushi' %}" class="dropdown-item">Hrushi Punjani </a>
+                                    <a href="{% url 'ben' %}" class="dropdown-item">Ben Verappen</a>
+                                    <a href="{% url 'ishrat' %}" class="dropdown-item">Ishrat Khan</a>
+                                    <a href=kareena.html class="dropdown-item">Kareena Dalappadu</a>
+                                    <a href="{% url 'kalana' %}" class="dropdown-item">Kalana Medagedara</a>
+                                </div>
+                            </div>
+                            
+                            <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
+                        </div>
+                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                        <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book A Free Consultation</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Hero Start -->
+        <div class="title">
+            <div class="heading">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mt-5 mb-5">What is Landlord And Tenent?</h1>
+                    <p> Whether you are a landlord or a tenant and no matter where your property is in the UK, we can advise you on landlord and tenant law. Here at Exchange Legal Services, 
+                        we have extensive experience with a wide range of private property disputes, so no matter how challenging your circumstances, our team can provide specialist advice with a proven track record of success. In our experience, many 
+                        disputes can be solved through negotiation before needing to take it to court. At Exchange Legal Services we will do whatever is in your best interest.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+ 
+
+        <!-- Service Start -->
+    <div class="contentcapsule">
+        <div class="container-fluid service py-6">
+                <div class="row g-4 mx-5">
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
+                        <div class="bg-light rounded service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-icon text-center">
+                                    <i class="fa fa-file-signature fa-7x text mb-4"></i>
+                                    <h4 class="mb-3">Tenancy Agreements</h4>
+                                    <p>A tenancy agreement is a legally binding contract between a landlord and tenant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="bg-light rounded service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-icon text-center">
+                                    <i class="fas fa-percent fa-7x text mb-4"></i>
+                                    <h4 class="mb-3">Rent and Rent Arrears</h4>
+                                    <p>Rent is a key component of the landlord-tenant relationship, and UK law provides various rules </p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.7s">
+                        <div class="bg-light rounded service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-icon text-center">
+                                    <i class="fa fa-lock fa-7x text mb-4"></i>
+                                    <h4 class="mb-3">Eviction</h4>
+                                    <p>Eviction is a legal process that allows a landlord to regain possession of their property </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
+                        <div class="bg-light rounded service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-icon text-center">
+                                    <i class="fa fa-question fa-7x text mb-4"></i>
+                                    <h4 class="mb-3">Dispute Resolution</h4>
+                                        <p>Disputes between landlords and tenants can arise for a variety of reasons</p>
+                                    </div>
+                                 </div>
+                                </div>
+                            </div>
+                    <div class="capsuledown">
+                        <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
+                            <div class="bg-light rounded service-item">
+                                <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                    <div class="service-content-icon text-center">
+                                        <i class="fas fa-house-damage fa-7x text mb-4"></i>
+                                        <h4 class="mb-3">Tenancy Termination</h4>
+                                        <p>Tenancy termination is the process of ending a tenancy agreement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        <!--Contact us-->
+
+        <div class="familycontact wow bounceInUp" data-wow-delay="0.9s">
+        <div class="contactbutton">
+            <p >Don't face your family law matter alone. Contact <span>Exchange Legal Services</span> today to schedule a consultation and learn more about how we can help you.</p>
+            <a href="contact.html" class="btn btn-primary scrollto">Contact us!</a>
+        </div>
+        </div>
+
+
+<!-- Footer Start -->
+<div class="footer_section py-6 my-4 mb-0 bg wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container-fluid">
+            <div class="row">
+                <div class="footercontent">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-3">Exchange Legal Service Limited.</h4>
+                            <p class="lh-lg mb-4">cookies policy.</p> 
+                        </div>
+                    </div>
+                    <div class="timingindex">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Opening Hours</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-calendar-week text-black me-2"></i> Monday to Friday</a></p>
+                                <p><i class="fa fa-clock text-black me-2"></i>9:30am – 5:00 pm</a></p>
+                                <p><i class="fa fa-calendar-times text-black me-2"></i>Saturday and Sunday</a></p>
+                                <p><i class="fa fa-times-circle text-black me-2"></i>Closed</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="contactindex">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-item">
+                                <h4 class="mb-4">Contact Us</h4>
+                                <div class="d-flex flex-column align-items-start">
+                                    <p><i class="fa fa-map-marker-alt text-black me-2"></i> Second Floor, One Oaks Court,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warwick Road, Borehamwood, Hertfordshire,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; United Kingdom, WD61GS</p>
+                                    <p><i class="fa fa-phone-alt text-black me-2"></i> +44 0203 149 8488</p>
+                                    <p><i class="fas fa-envelope text-black me-2"></i> info@exchangelegalservices.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map_main">
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9900.332026627553!2d-0.2554604!3d51.6583166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487617243bc26fc3%3A0x63573796ad554ad9!2sExchange%20Legal%20Services!5e0!3m2!1sen!2sin!4v1704343551894!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> 
+             </div>
+             <div class="follow_text">
+                <h4 class="col-md-12">Follow Us</h4></div>
+             <div class="social_icon">
+                    <a href="https://www.facebook.com/exchangelegalservices" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle" ><i class="fab fa-facebook-f" ></i></a>
+                    <a href="https://www.facebook.com/exchangelegalservices" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/exchange-legal-services/" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/exchangelegalservices/" target="_blank" class="btn btn-primary btn-sm-square rounded-circle"><i class="fab fa-instagram"></i></a>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Copyright Start -->
+<div class="copyright_section bg-dark py-3">
+    <div class="container">
+        <p class="copyright_text">Copyright <i class="fa fa-copyright"></i> Exchange Legal Service Limited | All Right Reserved</a>.</p>
+      </p>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+        <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <!-- Template Javascript -->
+   <!--script src="js/main.js"></script-->
+
+   <script src="{% static 'js/main.js' %}"></script>
+    </body>
+
+</html>

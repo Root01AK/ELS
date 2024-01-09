@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Ex-change Legal Service | About</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'Bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+         <!-- Favicon
+           ============================================ -->
+           <link rel="icon" type="image/png" href="{% static 'img/ELSLOGO.png' %}">
+           
+        <!-- Template Stylesheet -->
+        <!--link href="css/style.css" rel="stylesheet"-->
+
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="preloader-active">
+            <div class="preloader d-flex align-items-center justify-content-center">
+                <div class="preloader-inner position-relative">
+                    <div class="preloader-circle"></div>
+                    <div class="preloader-img pere-text">
+                        <img src="{% static 'img/ELSLOGO.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+<!-- Navbar start -->
+<div class="overlay">
+    <div class="container-fluid nav-bar">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg py-4">
+                <a href="index.html" class="navbar-brand">
+                    <img src="{% static 'img/ELS white.png' %}" width="140px" height="10%" alt="logo">
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link active">About Us</a>
+                        <div class="nav-item dropdown">
+                            <a href="service.html" class="nav-link dropdown-toggle">Services</a>
+                            <div class="dropdown-menu bg-light">
+                                <a href="{% url 'familylaw' %}" class="dropdown-item">Family Law</a>
+                                <a href="{% url 'wills and probate' %}" class="dropdown-item">wills and Probate</a>
+                                <a href="{% url 'employmentlaw' %}" class="dropdown-item">Employment Law</a>
+                                <a href="{% url 'litigation' %}" class="dropdown-item">Litigation</a>
+                                <a href="{% url 'rentrepayment' %}" class="dropdown-item">Rent Repayment Order</a>
+                                <a href="{% url 'landlord&tenent' %}" class="dropdown-item">Landlord and Tenant</a>
+                                <a href="{% url 'insolvencymatters' %}" class="dropdown-item">Insolvency Matters</a>
+                                <a href="{% url 'debtrecovery' %}" class="dropdown-item">Debt Recovery</a>
+                                <a href="{% url 'clinicalnegligence' %}" class="dropdown-item">Clinical Negligence</a>
+                                <a href="{% url 'contract' %}" class="dropdown-item">Contract Law</a>
+                                <a href="{% url 'bankingandfinance' %}" class="dropdown-item">Banking And Finance</a>
+                                <a href="{% url 'tradefinance' %}" class="dropdown-item">Trade Finance</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="{% url 'team' %}" class="nav-link dropdown-toggle">Our Team</a>
+                            <div class="dropdown-menu bg-light">
+                                <a href="{% url 'hrushi' %}" class="dropdown-item">Hrushi Punjani </a>
+                                <a href="{% url 'ben' %}" class="dropdown-item">Ben Verappen</a>
+                                <a href="{% url 'ishrat' %}" class="dropdown-item">Ishrat Khan</a>
+                                <a href=kareena.html class="dropdown-item">Kareena Dalappadu</a>
+                                <a href="{% url 'kalana' %}" class="dropdown-item">Kalana Medagedara</a>
+                            </div>
+                        </div>
+                        
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                    <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                    <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book A Free Consultation</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+    
+    <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Hero Start >
+        <div class="container-fluidabout  py-6 my-6 mt-0">
+                <img src="img/abt.jpg" height="50%">
+        </div>
+        < Hero End -->
+
+
+        <!-- About Start -->
+        <div id="stories.html" class="stories_section layout_padding">
+            <div class="container">
+               <h1 class="stories_taital mt-5 mb-5">Mission,Vision & Our Story.</h1>
+               <div class="">
+                  <div class="stories_section_2 layout_padding mb-5">
+                     <div class="row">
+                        <div class="col-lg-4 col-sm-12">
+                           <div class="image_box">
+                              <div class="image_6"><img src="{% static 'img/service/mission.jpg' %}"  width="375px"></div>
+                              <h3 class="heading_text">Mission</h3>
+                              <p class="texts">Our mission is to provide outstanding legal services to individuals and businesses, guided by our commitment to excellence, integrity, and client satisfaction. 
+                                We strive to understand our client's unique needs and objectives and to deliver practical, cost-effective solutions that achieve their desired outcomes. Our goal is to be trusted advisors to our clients,
+                                 providing them with the highest level of legal expertise, while always putting their interests first.</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                           <div class="image_box">
+                              <div class="image_6"><img src="{% static 'img/service/vision.jpg' %}"  width="375px"></div>
+                              <h3 class="heading_text">Vision</h3>
+                              <p class="texts">Our vision is to be a leading law firm that is recognised for its excellence, innovation, and commitment to its clients and communities. We aim to be a 
+                                law firm that attracts and retains the best legal talent, fosters a culture of collaboration and learning, and continuously improves its delivery of legal services through the use of technology and innovation. 
+                                We aspire to be a Law firm that is not only successful in terms of business, but that is also respected and admired for its ethical values, professionalism, and social responsibility</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                           <div class="image_box">
+                              <div class="image_6"><img src="{% static 'img/service/value.jpg' %}" width="375px"></div>
+                              <h3 class="heading_text">Our Story</h3>
+                              <p class="texts">Exchange Legal Services started its operation in late 2022. The firm was founded by 
+                                Mr. Ben Veerapen, a qualified Solicitor of the Supreme Court of England and Wales, and co-partner Hrushi Punjani.</p>
+                                <p>Although a relatively new firm, Ben Veerapen has been in legal practice since December 2002. Since its inception, Exchange Legal Services has hit the floor running with a following and already boasts a 
+                                    large database of clients ranging from the banking industry, overseas enterprises, and small to medium property developers.</p>
+                                    <p>We have strong links with the banking industry and enterprises around the world with subsidiaries in the UK. 
+                                        We are an international practice acting for companies based overseas</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        <!-- About End -->
+
+        <!-- Team Start -->
+        <div class="container-team team py-6">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <large class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mt-5 mb-3">Our Team</large>
+                    <h5>Our team is composed of highly skilled professionals with knowledgeable understanding of the legal system and a commitment to achieving the best possible outcome for our clients.</h5>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.1s">
+                        <div class="team-item rounded">
+                            <img class="img-fluid rounded-top " src="{% static 'img/Team/Hrushi.jpg' %}" alt="Hrushi">
+                            <div class="team-content text-center py-3 bg-dark rounded-bottom">
+                                <h4 class="text">Hrushi Punjani</h4>
+                                <p class="text-white mb-0">Director</p>
+                            </div>
+                            <div class="team-icon d-flex flex-column justify-content-center m-4">
+                                <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fas fa-share-alt"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.3s">
+                        <div class="team-item rounded">
+                            <img class="img-fluid rounded-top " src="{% static 'img/Team/Ishrath khan.jpg' %}" alt="Ishrath khan">
+                            <div class="team-content text-center py-3 bg-dark rounded-bottom">
+                                <h4 class="text">Ishrat Khan</h4>
+                                <p class="text-white mb-0">Head of Compliance</p>
+                            </div>
+                            <div class="team-icon d-flex flex-column justify-content-center m-4">
+                                <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fas fa-share-alt"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="team-item rounded">
+                            <img class="img-fluid rounded-top " src="{% static 'img/Team/ben edited.jpg' %}" alt="">
+                            <div class="team-content text-center py-3 bg-dark rounded-bottom">
+                                <h4 class="text">Ben Veerapen</h4>
+                                <p class="text-white mb-0">Managing Partner</p>
+                            </div>
+                            <div class="team-icon d-flex flex-column justify-content-center m-4">
+                                <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fas fa-share-alt"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="team-item rounded">
+                            <img class="img-fluid rounded-top " src="{% static 'img/Team/Kalana.jpg' %}" alt="">
+                            <div class="team-content text-center py-3 bg-dark rounded-bottom">
+                                <h4 class="text">Kalana Medagedara</h4>
+                                <p class="text-white mb-0">Operations And Administrations</p>
+                            </div>
+                            <div class="team-icon d-flex flex-column justify-content-center m-4">
+                                <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fas fa-share-alt"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.7s">
+                        <div class="team-item rounded">
+                            <img class="img-fluid rounded-top " src="img/Team/Kareena dalappadu.jpg" alt="Kareena Dalappadu">
+                            <div class="team-content text-center py-3 bg-dark rounded-bottom">
+                                <h4 class="text">Kareena Dalappadu</h4>
+                                <p class="text-white mb-0">Paralegal</p>
+                            </div>
+                            <div class="team-icon d-flex flex-column justify-content-center m-4">
+                                <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fas fa-share-alt"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square rounded-circle mb-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div-->
+                </div>
+                <a href={% url 'team' %} class="btn btn-primary py-3 px-5 rounded-pill">Our Team<i class="fas fa-arrow-right ps-2"></i></a>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+<!-- Footer Start -->
+<div class="footer_section py-6 my-4 mb-0 bg wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footercontent">
+                <div class="col-lg-3 col-md-12">
+                    <div class="footer-item">
+                        <h5 class="text">Exchange Legal Service Limited.</h5>
+                        <p class="lh-lg mb-2">cookies policy.</p> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="mb-3">Opening Hours</h4>
+                        <div class="d-flex flex-column align-items-start">
+                            <p><i class="fa fa-calendar-week text-black me-2"></i> Monday to Friday</a></p>
+                            <p><i class="fa fa-clock text-black me-2"></i>9:30am – 5:00 pm</a></p>
+                            <p><i class="fa fa-calendar-times text-black me-2"></i>Saturday and Sunday</a></p>
+                            <p><i class="fa fa-times-circle text-black me-2"></i>Closed</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactindex">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-3">Contact Us</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-map-marker-alt text-black me-2"></i> Second Floor, One Oaks Court, Warwick Road, Borehamwood, Hertfordshire, United Kingdom, WD61GS</p>
+                                <p><i class="fa fa-phone-alt text-black me-2"></i> +44 0203 149 8488</p>
+                                <p><i class="fas fa-envelope text-black me-2"></i> info@exchangelegalservices.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map_main">
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9900.332026627553!2d-0.2554604!3d51.6583166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487617243bc26fc3%3A0x63573796ad554ad9!2sExchange%20Legal%20Services!5e0!3m2!1sen!2sin!4v1704343551894!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> 
+             </div>
+             <div class="follow_text">
+                <h4 class="col-md-12">Follow Us</h4></div>
+             <div class="social_icon">
+                    <a href="https://www.facebook.com/exchangelegalservices" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle" ><i class="fab fa-facebook-f" ></i></a>
+                    <a href="https://www.facebook.com/exchangelegalservices" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/exchange-legal-services/" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/exchangelegalservices/" target="_blank" class="btn btn-primary btn-sm-square rounded-circle"><i class="fab fa-instagram"></i></a>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Copyright Start -->
+<div class="copyright_section bg-dark py-3">
+    <div class="container">
+        <p class="copyright_text">Copyright <i class="fa fa-copyright"></i> Exchange Legal Service Limited | All Right Reserved</a>.</p>
+      </p>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+        <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+        <!-- Template Javascript -->
+        <!--script src="js/main.js"></script-->
+
+        <script src="{% static 'js/main.js' %}"></script>
+
+    </body>
+</html>
