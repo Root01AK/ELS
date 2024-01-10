@@ -14,18 +14,6 @@ def about(request):
 
 #contact
 def contact(request):
-    if request.method=="POST":
-        contact=contact()
-        name=request.POST.get('name')
-        email=request.POST.get('email')
-        subject=request.POST.get('subject')
-        subject=request.POST.get('subject')
-        contact.name=name
-        contact.email=email
-        contact.subject=subject
-        contact.subject=subject
-        contact.save()
-        return HttpResponse("<h1> Thanks For Contating Us.</h1>")
     return render(request, 'contact.html')
 
 #banking&finance
