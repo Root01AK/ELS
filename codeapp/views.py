@@ -18,12 +18,10 @@ def contact(request):
         contact=contact()
         name=request.POST.get('name')
         email=request.POST.get('email')
-        phone=request.POST.get('Phonenumber')
         subject=request.POST.get('subject')
         subject=request.POST.get('subject')
         contact.name=name
         contact.email=email
-        contact.phone=phone
         contact.subject=subject
         contact.subject=subject
         contact.save()
